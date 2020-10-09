@@ -1,6 +1,6 @@
 <template>
   <h1 class="title">
-    GameWin Bet <b-badge>New</b-badge>
+    GameWin Live <b-badge>New</b-badge>
   </h1>
 </template>
 
