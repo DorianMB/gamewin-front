@@ -3,7 +3,8 @@
     <div>
       <Logo />
       <h1 class="title">
-        gamewin-front
+        GameWin
+        <font-awesome-icon :icon="['far', 'address-card']" />
       </h1>
       <div class="links">
         <a
