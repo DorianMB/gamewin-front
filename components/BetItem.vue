@@ -1,22 +1,22 @@
 <template>
-  <div v-if="bet" class="bet-item d-flex justify-content-between">
-    <div class="d-flex flex-column justify-content-around">
+  <button v-if="bet" class="btn btn-block text-left bet-item d-flex justify-content-between align-items-center">
+    <div class="d-flex flex-column">
       <span class="bet-header">{{ formatDate(bet.date) }} - {{ bet.competition }}</span>
       <span class="teams">{{ bet.teams[0] }} - {{ bet.teams[1] }}</span>
     </div>
     <div class="d-flex">
-      <div class="rating-card d-flex flex-column">
+      <button class="btn rating-card d-flex flex-column">
         <span class="rating-team">{{ bet.teams[0] }}</span>
         <span class="rating">{{ bet.ratings[0] }}</span>
-      </div>
-      <div class="rating-card d-flex flex-column">
+      </button>
+      <button class="btn rating-card d-flex flex-column">
         <span class="rating-team">Draw</span>
         <span class="rating">{{ bet.ratings[1] }}</span>
-      </div>
-      <div class="rating-card d-flex flex-column">
+      </button>
+      <button class="btn rating-card d-flex flex-column">
         <span class="rating-team">{{ bet.teams[1] }}</span>
         <span class="rating">{{ bet.ratings[2] }}</span>
-      </div>
+      </button>
       <div class="bet-link d-flex align-items-center">
         <div class="d-flex flex-column align-items-center">
           <span><strong>{{bet.numberOfBets}}</strong></span>
@@ -25,7 +25,7 @@
         <font-awesome-icon :icon="['fas', 'chevron-right']" />
       </div>
     </div>
-  </div>
+  </button>
 </template>
 
 <script>
@@ -90,7 +90,7 @@ export default {
       font-size: 12px;
       svg {
         color: gray;
-        margin-left: 5px;
+        margin-left: 8px;
         font-size: 14px;
       }
     }
