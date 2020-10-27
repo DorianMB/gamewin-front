@@ -59,6 +59,7 @@ export default {
 
 <style scoped lang="scss">
   .bet-item {
+    margin: 1rem 0;
     border: 1px solid #cdcdcd;
     border-radius: 5px;
     padding: 0.5rem;
