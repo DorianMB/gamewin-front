@@ -1,6 +1,6 @@
 <template>
   <div class="bet-container">
-    <bet-item v-for="bet in bets" :bet="bet"></bet-item>
+    <bet-item v-for="match in matchs" :match="match"></bet-item>
   </div>
 </template>
 
@@ -12,32 +12,17 @@ export default {
   components: {BetItem},
   data: () => {
     return {
-      bets: [
-        {
-          date: new Date(),
-          competition: 'compétition 1',
-          game: 'League of Legends',
-          teams: ['G2', 'SKT'],
-          ratings: [21, 10, 1],
-          numberOfBets: 45
-        },
-        {
-          date: new Date(),
-          competition: 'compétition 1',
-          game: 'League of Legends',
-          teams: ['G2', 'SKT'],
-          ratings: [10, 4, 14],
-          numberOfBets: 30
-        },
-        {
-          date: new Date(),
-          competition: 'compétition 2',
-          game: 'League of Legends',
-          teams: ['G2', 'SKT'],
-          ratings: [22, 8, 2],
-          numberOfBets: 100
-        },
-      ]
+      matchs: null,
+    }
+  },
+  beforeMount() {
+    this.update();
+  },
+  methods: {
+    update() {
+      if (localStorage.matchs) {
+        this.matchs = JSON.parse(localStorage.matchs)
+      }
     }
   }
 }

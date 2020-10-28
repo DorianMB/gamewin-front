@@ -6,22 +6,16 @@
         <font-awesome-icon :icon="['far', 'address-card']" />
       </h1>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
           class="button--green"
         >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
+          Add data
+        </button>
+        <button
           class="button--grey"
         >
           GitHub
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -41,6 +35,10 @@ export default Vue.extend({})
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.button--green, .button--grey {
+  background: white;
 }
 
 .links {
