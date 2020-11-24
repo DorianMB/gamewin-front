@@ -7,6 +7,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {fab} from '@fortawesome/free-brands-svg-icons'

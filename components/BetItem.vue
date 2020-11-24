@@ -53,8 +53,13 @@ export default {
     },
     bets: Array
   },
-  beforeMount() {
-    this.getBets();
+  mounted() {
+    this.getBets()
+  },
+  watch: {
+    match: function(newVal, oldVal) { // watch it
+      this.getBets();
+    }
   },
   methods: {
     getBets() {
@@ -123,16 +128,21 @@ export default {
       border-radius: 5px;
       margin: 0 0.5rem;
       &:hover {
-        background: #c7d0d8;
+        background: #e6c758;
       }
 
       &.isChosen {
-        background: #28A745;
+        background: #c7d0d8;
       }
 
       .rating-team {
         font-size: 11px;
         text-transform: uppercase;
+        width: 100%;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .rating {

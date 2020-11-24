@@ -57,6 +57,15 @@ export default {
           ratings: [22, 8, 2],
           numberOfBets: 100
         },
+        {
+          id:4,
+          date: new Date(),
+          competition: 'RLCS',
+          game: 'Rocket League',
+          teams: ['Renault Vitality', 'NRG'],
+          ratings: [22, 8, 2],
+          numberOfBets: 105
+        },
       ]);
     },
     clearData() {
